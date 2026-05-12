@@ -5,7 +5,7 @@ Run [Swival](https://github.com/Swival/swival) inside a [nono](https://nono.sh) 
 ## Install
 
 ```sh
-nono pull jedisct1/swival
+nono pull jedisct1/swival-nono
 ```
 
 ## Run
@@ -34,7 +34,7 @@ nono run --profile swival --allow-cwd -- \
 
 ## What you get
 
-The pack adds a `swival` nono profile (shown in `nono profile list` as `from jedisct1/swival`) and a Swival skill called `nono-sandbox`. The profile gives Swival the access it needs to run normally: the working directory, `~/.config/swival`, language runtimes, Homebrew, git config, outbound network, and loopback. It blocks credentials, keychains, browser data, and shell history.
+The pack adds a `swival` nono profile (shown in `nono profile list` as `from jedisct1/swival-nono`) and a Swival skill called `nono-sandbox`. The profile gives Swival the access it needs to run normally: the working directory, `~/.config/swival`, language runtimes, Homebrew, git config, outbound network, and loopback. It blocks credentials, keychains, browser data, and shell history.
 
 The skill is registered in Swival's global skill catalog as soon as it's installed. When Swival hits a permission error inside the sandbox, the model should load the skill and call `nono why --self` to find out exactly what is blocked and why, then tell you in plain language. If you actually need that access, it offers a one-shot grant for this session or drafts a `swival-local` profile you can promote to make the change persistent.
 
@@ -72,7 +72,7 @@ Swival has its own optional OS sandbox flag (`--sandbox agentfs`). Don't combine
 ## Uninstall
 
 ```sh
-nono remove jedisct1/swival
+nono remove jedisct1/swival-nono
 ```
 
 The built-in `swival` profile that ships with nono becomes active again automatically.

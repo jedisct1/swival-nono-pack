@@ -33,7 +33,7 @@ jobs:
       - uses: always-further/agent-sign@c9426f1a00f823dd53e7b9068d910a68b43e49e9 # v0.0.11
         with:
           publish: "true"
-          package-name: swival
+          package-name: swival-nono
           package-namespace: jedisct1
           package-version: ${{ github.ref_name }}
           package-path: .
