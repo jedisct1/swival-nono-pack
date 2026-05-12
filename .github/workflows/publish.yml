@@ -1,41 +1,20 @@
 name: Publish nono pack
-
 on:
   push:
     tags:
       - "v*"
-
 permissions:
   id-token: write
   contents: read
-
 jobs:
   publish:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6
-
-      - name: Build files list from package.json
-        id: files
-        run: |
-          set -euo pipefail
-          {
-            echo "package.json"
-            [ -f "README.md" ] && echo "README.md"
-            jq -r '.artifacts[].path' package.json
-          } | sort -u > /tmp/files.txt
-          {
-            echo "files<<EOF"
-            cat /tmp/files.txt
-            echo "EOF"
-          } >> "$GITHUB_OUTPUT"
-
-      - uses: always-further/agent-sign@c9426f1a00f823dd53e7b9068d910a68b43e49e9 # v0.0.11
+      - uses: actions/checkout@34e11487 # v4
+      - uses: always-further/agent-sign@38b94e4e # main
         with:
           publish: "true"
           package-name: swival-nono
           package-namespace: jedisct1
           package-version: ${{ github.ref_name }}
           package-path: .
-          registry-url: https://registry.nono.sh/api/v1
-          files: ${{ steps.files.outputs.files }}
