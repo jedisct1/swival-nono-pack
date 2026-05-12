@@ -1,0 +1,4 @@
+swival nono pack marker
+
+Installed by the swival nono pack to ensure ~/.config/swival/skills/ exists
+before the nono-sandbox skill is symlinked into it.
