@@ -2,7 +2,8 @@
   "schema_version": 1,
   "name": "swival",
   "description": "Teaches Swival how to work inside a nono security sandbox. Ships the nono-sandbox skill that diagnoses permission denials and helps users draft profile extensions when they need more access.",
-  "license": "Apache-2.0",
+  "license": "MIT",
+  "author": "Frank Denis <github@pureftpd.org>",
   "platforms": ["macos", "linux"],
   "min_nono_version": "0.53.0",
   "artifacts": [

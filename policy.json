@@ -4,7 +4,7 @@
     "name": "swival",
     "version": "1.0.0",
     "description": "Swival CLI coding agent (registry-managed). Supersedes the built-in swival profile: adds read access to ~/.config/nono/packages and ~/.config/nono/profiles so symlinked skills resolve inside the sandbox, and write access to ~/.config/nono/profile-drafts so Swival can draft profile extensions when the user agrees to expand access.",
-    "author": "swival-nono-pack"
+    "author": "Frank Denis <github@pureftpd.org>"
   },
   "groups": {
     "include": [
