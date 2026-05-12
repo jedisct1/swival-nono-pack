@@ -14,7 +14,7 @@ jobs:
       - uses: always-further/agent-sign@38b94e4e # main
         with:
           publish: "true"
-          package-name: swival-nono
+          package-name: swival
           package-namespace: jedisct1
           package-version: ${{ github.ref_name }}
           package-path: .
